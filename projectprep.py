@@ -4,17 +4,17 @@ from pyspark import SparkContext
 
 
 
-#sc = SparkContext(appName="TestPySparkJDBC")
-#sqlContext = SQLContext(sc)
+sc = SparkContext(appName="TestPySparkJDBC")
+sqlContext = SQLContext(sc)
 
-#source_df = sqlContext.read.format('jdbc').options(
- #         url='jdbc:mysql://localhost/Car_Accidents',
-  #        driver='com.mysql.jdbc.Driver',
-   #       dbtable='NY',
-    #      user='Bill',
-     #     password='Bill').load()
-#df = sqlContext.sql("SELECT * FROM NY")
-#df.show()
+source_df = sqlContext.read.format('jdbc').options(
+         url='jdbc:mysql://localhost/Car_Accidents',
+         driver='com.mysql.jdbc.Driver',
+         dbtable='NY',
+         user='Bill',
+         password='Bill').load()
+df = sqlContext.sql("SELECT * FROM NY")
+df.show()
 
 
 
